@@ -2091,7 +2091,7 @@ esp_err_t wifi_manager_start_evil_portal(const char *URLorFilePath, const char *
 
     wifi_config_t ap_config = {.ap = {
                                    .channel = 6,
-                                   .ssid_hidden = 0,
+                                   .ssid_hidden = 1,
                                    .max_connection = 8,
                                    .beacon_interval = 100,
                                }};
