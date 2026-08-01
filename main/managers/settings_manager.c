@@ -182,7 +182,7 @@ void settings_set_defaults(FSettings *settings) {
   settings->broadcast_speed = 5;
   // default to the 'Bright' palette (index 3)
   settings->menu_theme = 3;
-  strcpy(settings->ap_ssid, "VTR-5470590"");
+  strcpy(settings->ap_ssid, "VTR-5470590");
   strcpy(settings->ap_password, "colores123");
   settings->rgb_speed = 15;
 
