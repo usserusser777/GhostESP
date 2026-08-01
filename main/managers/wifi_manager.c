@@ -1023,8 +1023,7 @@ static void wifi_event_handler(void *arg, esp_event_base_t event_base, int32_t e
             status_display_show_status("WiFi Disconnected");
             toast_show("WiFi disconnected", TOAST_WARN);
             manual_disconnect = false;
-            wifi_reconnect_re
-              set();
+            wifi_reconnect_reset();
         } else {
             glog("WiFi disconnected: %s (reason %d)\n", reason_str, disconnected->reason);
             status_display_show_status("WiFi Lost");
