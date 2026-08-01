@@ -1023,7 +1023,8 @@ static void wifi_event_handler(void *arg, esp_event_base_t event_base, int32_t e
             status_display_show_status("WiFi Disconnected");
             toast_show("WiFi disconnected", TOAST_WARN);
             manual_disconnect = false;
-            wifi_reconnect_reset();
+            wifi_reconnect_re
+              set();
         } else {
             glog("WiFi disconnected: %s (reason %d)\n", reason_str, disconnected->reason);
             status_display_show_status("WiFi Lost");
@@ -4785,7 +4786,7 @@ static void karma_task(void *param) {
                 .channel = 1,
                 .authmode = WIFI_AUTH_OPEN,
                 .max_connection = 4,
-                .ssid_hidden = 0
+                .ssid_hidden = 1
             }
         };
         strncpy((char *)ap_config.ap.ssid, karma_ssid_cache[0], 32);
@@ -4812,7 +4813,7 @@ static void karma_task(void *param) {
                     .channel = 1,
                     .authmode = WIFI_AUTH_OPEN,
                     .max_connection = 4,
-                    .ssid_hidden = 0
+                    .ssid_hidden = 1
                 }
             };
             strncpy((char *)ap_config.ap.ssid, karma_ssid_cache[karma_ssid_index], 32);
